@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: #fff;
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+.wrapper
+{
+    width: 1280px;
+    margin: 50px auto;
+}
+header ul.nav
+{
+    float: right;
+    list-style: none;
+
+}
+header
+{
+  position: relative;
+}
+header ul.nav li
+{
+   display: inline;
+   margin-left: 25px;
+   cursor: pointer;
+   transition: .5s;  
+}
+header ul.nav li:hover
+{
+   color: rgb(17, 134, 134); 
+   opacity: .6;
+}
+ header .logo
+ {
+    font-weight: 600;
+    font-size: 20px;
+ }
+ header .presentation
+ {
+    margin: 50px 0;
+    background: url('./assets/bg.jpg') no-repeat;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #bcbcbc;
+    position: relative;
+ }
+  header .presentation::after
+  {
+    content: 'We got a lot of PC';
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    align-items: center;
+  }
+  footer
+  {
+    text-align: center;
+    margin-top: 100px;
+  }
+  main
+  {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  main .item
+  {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    
+  }
+  .full-item
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    overflow: auto;
+  }
+  .full-item img
+  {
+     width: 100%;
+    cursor: pointer;
+    transition: .3s;
+
+     height: 350px;
+   
+  }
+  .full-item > div
+  {
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background-color: #f2f2f2;
+    border-radius: 9px;
+  }
+  .close-pop-up
+  {
+    position: absolute;
+    top: 2%;
+    left: 96%;
+    scale: 2;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .close-pop-up:hover
+  {
+    color: rgb(17, 134, 134);
+  }
+ main .item img
+  {
+    
+    width: 100%;
+    cursor: pointer;
+    transition: .3s;
+    max-height: 250px;
+  }
+
+  main .item img:hover
+  {
+    transform: scale(1.05);
+  }
+  .full-item img:hover
+  {
+    transform: scale(1.05);
+    border-radius: 20px;
+  }
+  .full-item h2, main h2, main p, main b,
+  .full-item p, .full-item b
+  {
+    margin: 10px 20px;
+    color: #333;
+
+  }
+  
+  .add-to-cart, .full-item button
+  {
+    margin-bottom: 25px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  /* CARTRT ICOO */
+ .shop-cart-button
+ {
+    float: right;
+    cursor: pointer;
+    transition: .5s;
+    height: 20px;
+    width: 27px;
+
+ }
+  .shop-cart-button.active
+  {
+     color: rgb(17, 134, 134);
+     transform: scale(1.5);
+  }
+  .shop-cart-button:hover
+  {
+    color: rgb(17, 134, 134);
+    transform: scale(1.5);
+  }
+
+  .shop-cart
+  {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 460px;
+    background: #fdfafa;
+    -webkit-box-shadow: 4px 5px 15px -7px #606060;
+    box-shadow: 4px 5px 15px -7px #606060;
+    z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0px;
+    /* opacity: 0; */
+    transition: .5s;
+    scale: 0;
+  }
+  .shop-cart.active
+  {
+    scale: 1;
+    
+  }
+  
+
+ 
+/* CART STYLE LOLLL */
+
+.shop-cart .item
+{
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+/* .item img
+{
+  width: 70px;
+  float: left;
+  margin-top: 20px;
+} */
+.item h2
+{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.item p
+{
+  color: #797979;
+  font-weight: 600;
+}
+.empty h2
+{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/* icon delete trash lol */
+.delete-icon
+{
+  float: right;
+  position: relative;
+  top: -25px;
+  transition: .3s;
+  cursor: pointer;
+  scale: 1.3;
+}
+.delete-icon:hover
+{
+  color: rgb(17, 134, 134);
+}
+/* SUMMM */
+.summ
+{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/* Categories */
+.categories div
+{
+  display: inline-block;
+  background: #f2f2f2;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  transition: .4s ;
+  cursor: pointer;
+}
+.categories div:hover
+{
+  background:  rgba(17, 134, 134, 0.788);
+  color: #f2f2f2;
+  transform: scale(1.1);
+}
